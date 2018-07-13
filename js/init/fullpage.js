@@ -8,7 +8,6 @@ $(document).ready(function() {
     paddingTop: '105px',
     fixedElements: '.main-header',
     afterLoad: function(origin) {
-      console.log(origin);
       if (origin === 'secondPage') {
         $('.main-header').removeClass('bg-color-2');
         $('.main-header').addClass('bg-color-1');
