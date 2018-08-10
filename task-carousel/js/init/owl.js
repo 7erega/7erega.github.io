@@ -4,7 +4,7 @@ slider = function() {
   if ($(window).width() < 480) {
     $('.news-list').addClass('owl-carousel');
     return $('.owl-carousel').owlCarousel({
-      dots: false,
+      dots: true,
       margin: 15,
       items: 1
     });
