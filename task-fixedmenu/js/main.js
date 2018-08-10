@@ -58,6 +58,9 @@ $(document).ready(function() {
     waitForFinalEvent((function() {
       setFooterHeight();
       teleport();
+      if ($(window).width() > 1200) {
+        fixedMenu();
+      }
     }), 200, '');
   });
 });
