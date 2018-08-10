@@ -2006,6 +2006,8 @@ a {
     font-size: 14px;
     width: 33.33%;
     padding: 15px; }
+  .news-list.owl-carousel {
+    margin: 0; }
 
 .news-card {
   border: 1px solid #eee; }
@@ -2022,14 +2024,8 @@ a {
     margin-top: 10px; }
 
 @media (max-width: 768px) {
-  .news-list li {
+  .news-list > li {
     width: 50%; } }
-
-@media (max-width: 480px) {
-  .news-list {
-    margin: 0; }
-    .news-list li {
-      width: auto; } }
 
 /**
  * Owl Carousel v2.3.4

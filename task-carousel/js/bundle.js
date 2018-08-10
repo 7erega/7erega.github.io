@@ -182,8 +182,6 @@ slider = function() {
 };
 
 slider();
-
-$(window).resize(slider);
 ;$('.selecter').selecter();
 ;$(function() {
   var isNumber, isValidEmail;
@@ -353,6 +351,7 @@ $(window).resize(slider);
     waitForFinalEvent((function() {
       setFooterHeight();
       teleport();
+      slider();
     }), 200, '');
   });
 });

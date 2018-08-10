@@ -15,5 +15,3 @@ slider = function() {
 };
 
 slider();
-
-$(window).resize(slider);

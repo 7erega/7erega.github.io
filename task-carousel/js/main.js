@@ -58,6 +58,7 @@ $(document).ready(function() {
     waitForFinalEvent((function() {
       setFooterHeight();
       teleport();
+      slider();
     }), 200, '');
   });
 });
