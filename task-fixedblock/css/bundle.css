@@ -1882,7 +1882,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 76px;
     z-index: 50; }
 
 .main-menu {
@@ -1907,8 +1907,13 @@ a {
 .mobile-menu-btn {
   display: none; }
 
-@media (max-width: 992px) {
-  .main-header .main-menu {
+@media (max-width: 1200px) {
+  .fixed-menu {
+    width: 100%;
+    height: 76px; }
+    .fixed-menu.active .mobile-menu-btn {
+      top: 13px; }
+  .main-menu {
     box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     height: 100%;
@@ -1924,52 +1929,52 @@ a {
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s; }
-    .main-header .main-menu > li {
+    .main-menu > li {
       display: block;
       text-align: center;
       margin-top: 0; }
-      .main-header .main-menu > li a {
+      .main-menu > li a {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
         width: 100%; }
-      .main-header .main-menu > li:nth-child(1) a {
+      .main-menu > li:nth-child(1) a {
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
         transition-delay: .1s; }
-      .main-header .main-menu > li:nth-child(2) a {
+      .main-menu > li:nth-child(2) a {
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
         transition-delay: .2s; }
-      .main-header .main-menu > li:nth-child(3) a {
+      .main-menu > li:nth-child(3) a {
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
         transition-delay: .3s; }
-      .main-header .main-menu > li:nth-child(4) a {
+      .main-menu > li:nth-child(4) a {
         transition-property: -webkit-transform;
         transition-property: transform;
         transition-property: transform, -webkit-transform;
         transition-delay: .4s; }
-    .main-header .main-menu.active {
+    .main-menu.active {
       -webkit-transform: translateX(0);
       transform: translateX(0); }
-      .main-header .main-menu.active > li a {
+      .main-menu.active > li a {
         -webkit-transform: translateX(0);
         transform: translateX(0); }
-  .main-header .mobile-menu-btn {
+  .mobile-menu-btn {
     display: block;
     font-size: 25px;
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 10px;
+    top: 105px;
     right: 20px;
     cursor: pointer;
     width: 50px;
     height: 50px; }
-    .main-header .mobile-menu-btn:before, .main-header .mobile-menu-btn:after {
+    .mobile-menu-btn:before, .mobile-menu-btn:after {
       content: "";
       display: block;
       width: 28px;
@@ -1982,17 +1987,20 @@ a {
       transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
       transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
       margin: 0 auto; }
-    .main-header .mobile-menu-btn:before {
+    .mobile-menu-btn:before {
       margin-bottom: 10px; }
-    .main-header .mobile-menu-btn:hover:before, .main-header .mobile-menu-btn:hover:after, .main-header .mobile-menu-btn:focus:before, .main-header .mobile-menu-btn:focus:after {
+    .mobile-menu-btn:hover:before, .mobile-menu-btn:hover:after, .mobile-menu-btn:focus:before, .mobile-menu-btn:focus:after {
       background: #969696; }
-    .main-header .mobile-menu-btn.active {
-      z-index: 15; }
-      .main-header .mobile-menu-btn.active:before {
+    .mobile-menu-btn.active {
+      z-index: 15;
+      top: 13px;
+      transition: top .2s;
+      position: fixed; }
+      .mobile-menu-btn.active:before {
         -webkit-transform: rotate(50deg);
         transform: rotate(50deg);
         margin-bottom: -4px; }
-      .main-header .mobile-menu-btn.active:after {
+      .mobile-menu-btn.active:after {
         -webkit-transform: rotate(-50deg);
         transform: rotate(-50deg); } }
 
