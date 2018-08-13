@@ -1864,6 +1864,35 @@ a {
       z-index: 2;
       position: relative; }
 
+@media (max-width: 480px) {
+  .list2:before {
+    left: 15px; }
+  .list2 > li {
+    display: block;
+    width: 100%; }
+    .list2 > li:nth-child(odd) {
+      padding-left: 50px;
+      padding-right: 0; }
+      .list2 > li:nth-child(odd):before {
+        left: 15px;
+        height: 100%;
+        top: 0; }
+      .list2 > li:nth-child(odd):after {
+        left: 5px; }
+    .list2 > li:nth-child(even) {
+      padding-left: 50px; }
+      .list2 > li:nth-child(even):before {
+        left: 15px;
+        height: 100%;
+        top: 0; }
+      .list2 > li:nth-child(even):after {
+        left: 5px; }
+      .list2 > li:nth-child(even) .list-item:before {
+        left: auto;
+        right: 15px; }
+    .list2 > li:first-child:before {
+      top: 45px; } }
+
 .main-header {
   background-color: #f7f7f7;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
